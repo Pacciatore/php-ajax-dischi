@@ -13,16 +13,14 @@ const app = new Vue({
     },
     methods: {
         getAlbums(genre) {
-            axios.get('https://flynn.boolean.careers/exercises/api/array/music')
+            axios.get('/php-ajax-dischi/api/album.php?filter=' + genre)
                 .then(response => {
                     if (response.status === 200) {
                         console.log(response);
-                        this.albums = response.data.response;
+                        this.albums = response.data;
                     }
                 })
                 .catch(e => console.log(e));
-
-
         }
     },
 

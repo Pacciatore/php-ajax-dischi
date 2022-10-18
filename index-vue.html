@@ -34,10 +34,8 @@
 
         <header class="pt-4">
 
-            <form action="./index.php" method="get" class="container">
-                <input type="text" name="filter" v-model="filter">
-                <input type="submit" value="Cerca">
-            </form>
+            <input type="text" name="filter" v-model="filter">
+            <input type="submit" value="Cerca" @click="getAlbums(filter)">
 
         </header>
 
