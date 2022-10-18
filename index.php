@@ -22,6 +22,24 @@
 
         <div class="album-container">
 
+            <?php
+
+            include __DIR__ . '/database.php';
+            // var_dump($database);
+
+            foreach ($database as $album) {
+            ?>
+
+                <div>
+                    <?php
+                    include __DIR__ . '/card-album.php';
+                    ?>
+                </div>
+
+            <?php
+            }
+            ?>
+
         </div>
 
     </div>
