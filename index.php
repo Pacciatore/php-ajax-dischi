@@ -18,7 +18,17 @@
 
 <body>
 
-    <div class="container">
+    <header class="pt-4">
+
+        <form action="./index.php" method="get" class="container">
+            <input type="text" name="filter">
+            <input type="submit" value="Cerca">
+        </form>
+
+    </header>
+
+
+    <main class="container pt-5">
 
         <div class="album-container">
 
@@ -42,7 +52,7 @@
 
         </div>
 
-    </div>
+    </main>
 
 </body>
 
