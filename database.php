@@ -23,11 +23,25 @@ $database = [
         'poster' => ''
     ],
     [
-        'title' => 'Killer Bomb',
+        'title' => 'Killer Queen',
         'author' => 'The Queen',
         'year' => 1991,
         'genre' => 'Pop',
         'poster' => ''
     ],
-    
-    ];
+    [
+        'title' => 'PsychoKiller',
+        'author' => 'Kasabian',
+        'year' => 1995,
+        'genre' => 'Grunge',
+        'poster' => ''
+    ],
+    [
+        'title' => 'New Jersey',
+        'author' => 'Bon Jovi',
+        'year' => 1988,
+        'genre' => 'Pop',
+        'poster' => ''
+    ],
+
+];
