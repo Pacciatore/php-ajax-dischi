@@ -18,10 +18,30 @@
 
 <body>
 
+    <?php
+
+    include __DIR__ . '/database.php';
+    $filter = '';
+
+    if (isset($_GET['filter'])) {
+        $filter = strtolower($_GET['filter']);
+        $data = [];
+
+        foreach ($database as $album) {
+            if (strlen($filter) === 0 || strtolower($album['genre']) == $filter) {
+                $data[] = $album;
+            }
+        }
+
+        $database = $data;
+    };
+
+    ?>
+
     <header class="pt-4">
 
         <form action="./index.php" method="get" class="container">
-            <input type="text" name="filter">
+            <input type="text" name="filter" value="<?= $filter ?>">
             <input type="submit" value="Cerca">
         </form>
 
@@ -33,9 +53,6 @@
         <div class="album-container">
 
             <?php
-
-            include __DIR__ . '/database.php';
-            // var_dump($database);
 
             foreach ($database as $album) {
             ?>
