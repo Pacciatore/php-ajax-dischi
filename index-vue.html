@@ -35,7 +35,7 @@
         <header class="pt-4">
 
             <form action="./index.php" method="get" class="container">
-                <input type="text" name="filter" value="">
+                <input type="text" name="filter" v-model="filter">
                 <input type="submit" value="Cerca">
             </form>
 
@@ -45,7 +45,15 @@
 
             <div class="album-container">
 
-                <div>
+                <div v-for="album in albums" :key="album.title" class="card">
+                    <div class="img-container">
+                        <img :src="album.poster" :alt="album.title" class="img-fluid">
+                    </div>
+
+                    <h2>{{album.title}}</h2>
+
+                    <p>{{album.year}}</p>
+                    <p>{{album.author}}</p>
 
                 </div>
 
