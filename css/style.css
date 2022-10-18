@@ -1,0 +1,12 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.album-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.album-container>* {
+    width: calc(100% / 3);
+}
